@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
     `]
 })
 export class WindFarmTopTenComponent {
-    public farmes = [
+    public farms = [
         { Name: 'Green Ridge Power (1476)' },
         { Name: 'Lake Erie Alternative (1400)' },
         { Name: 'Wind Power Partners (967)' },

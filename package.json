@@ -12,7 +12,8 @@
     "url": "https://github.com/datumgeek/plotter-view-samples-angular2/issues"
   },
   "scripts": {
-    "build": "tsc -w"
+    "build": "tsc -w",
+    "serve": "http-server -p 9010 --cors"
   },
   "license": "MIT",
   "author": "Datum Geek (http://datumgeek.github.io)",
@@ -22,8 +23,11 @@
     "url": "http://github.com/datumgeek/plotter-view-samples-angular2"
   },
   "devDependencies": {
+    "@angular/common": "^2.1.2",
+    "@angular/core": "2.1.2",
+    "@angular/platform-browser-dynamic": "^2.1.2",
+    "rxjs": "^5.0.0-rc.1",
     "tslint": "^3.15.1",
-    "typescript": "^2.0.6",
-    "@angular/core": "2.1.2"
+    "typescript": "^2.0.6"
   }
 }

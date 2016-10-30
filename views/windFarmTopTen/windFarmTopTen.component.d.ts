@@ -1,5 +1,5 @@
 export declare class WindFarmTopTenComponent {
-    farmes: {
+    farms: {
         Name: string;
     }[];
     launchWindFarmDetails(farm: {

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,30 +7,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var platform_browser_1 = require('@angular/platform-browser');
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var http_1 = require('@angular/http');
-var ViewSamplesModule = (function () {
-    function ViewSamplesModule() {
-    }
-    ViewSamplesModule = __decorate([
-        core_1.NgModule({
-            declarations: [
-                CustomerListComponent,
-                CustomerDetailComponent
-            ],
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
-                http_1.HttpModule
-            ],
-            providers: [],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ViewSamplesModule);
-    return ViewSamplesModule;
-}());
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = ViewSamplesModule;
+define(["require", "exports", '@angular/platform-browser', '@angular/core', '@angular/forms', '@angular/http', './windFarmTopTen/windFarmTopTen.component'], function (require, exports, platform_browser_1, core_1, forms_1, http_1, windFarmTopTen_component_1) {
+    "use strict";
+    var ViewSamplesModule = (function () {
+        function ViewSamplesModule() {
+        }
+        ViewSamplesModule = __decorate([
+            core_1.NgModule({
+                declarations: [
+                    windFarmTopTen_component_1.WindFarmTopTenComponent
+                ],
+                imports: [
+                    platform_browser_1.BrowserModule,
+                    forms_1.FormsModule,
+                    http_1.HttpModule
+                ],
+                providers: [],
+            }), 
+            __metadata('design:paramtypes', [])
+        ], ViewSamplesModule);
+        return ViewSamplesModule;
+    }());
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.default = ViewSamplesModule;
+});
 //# sourceMappingURL=viewSamples.module.js.map

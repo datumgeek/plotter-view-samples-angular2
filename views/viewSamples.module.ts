@@ -7,8 +7,7 @@ import { WindFarmTopTenComponent } from './windFarmTopTen/windFarmTopTen.compone
 
 @NgModule({
   declarations: [
-    CustomerListComponent,
-    CustomerDetailComponent
+    WindFarmTopTenComponent
   ],
   imports: [
     BrowserModule,
