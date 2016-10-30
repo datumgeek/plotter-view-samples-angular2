@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/platform-browser', '@angular/core', '@angular/forms', '@angular/http', './windFarmTopTen/windFarmTopTen.component'], function (require, exports, platform_browser_1, core_1, forms_1, http_1, windFarmTopTen_component_1) {
+define(["require", "exports", '@angular/platform-browser', '@angular/core', '@angular/forms', '@angular/http', './windFarmTopTen/windFarmTopTen.component', './treemap/treemap.component'], function (require, exports, platform_browser_1, core_1, forms_1, http_1, windFarmTopTen_component_1, treemap_component_1) {
     "use strict";
     var ViewSamplesModule = (function () {
         function ViewSamplesModule() {
@@ -15,7 +15,8 @@ define(["require", "exports", '@angular/platform-browser', '@angular/core', '@an
         ViewSamplesModule = __decorate([
             core_1.NgModule({
                 declarations: [
-                    windFarmTopTen_component_1.WindFarmTopTenComponent
+                    windFarmTopTen_component_1.WindFarmTopTenComponent,
+                    treemap_component_1.TreemapComponent
                 ],
                 imports: [
                     platform_browser_1.BrowserModule,

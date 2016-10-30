@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { WindFarmTopTenComponent } from './windFarmTopTen/windFarmTopTen.component';
+import { TreemapComponent } from './treemap/treemap.component';
 
 @NgModule({
   declarations: [
-    WindFarmTopTenComponent
+    WindFarmTopTenComponent,
+    TreemapComponent
   ],
   imports: [
     BrowserModule,
