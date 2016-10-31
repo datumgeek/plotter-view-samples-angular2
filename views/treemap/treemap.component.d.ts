@@ -1,5 +1,9 @@
-import { OnInit } from '@angular/core';
+import { OnInit, ViewContainerRef } from '@angular/core';
 export declare class TreemapComponent implements OnInit {
+    chartPlaceholderRef: ViewContainerRef;
+    chartElement: HTMLElement;
+    formPlaceholderRef: ViewContainerRef;
+    formElement: HTMLElement;
     ngOnInit(): void;
     getData(): {
         "name": string;

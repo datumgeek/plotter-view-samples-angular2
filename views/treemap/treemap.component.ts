@@ -1,15 +1,15 @@
 let d3 = (<any>window).d3;
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'v-treemap',
     template: `
-        <form class="treemap">
+        <form #formPlaceholder class="treemap">
             <label><input type="radio" name="mode" value="size" checked> Size</label>
             <label><input type="radio" name="mode" value="count"> Count</label>
         </form>
-        <div id="treemap-body">
+        <div #chartPlaceholder class="treemap-body">
         </div>
     `,
     styles: [`
@@ -27,13 +27,18 @@ import { Component, OnInit } from '@angular/core';
             position: absolute;
             text-indent: 2px;
         }
-        #treemap-body {
+        :host >>> .treemap-body {
             width: 100%;
             height: 100%;
         }
     `]
 })
 export class TreemapComponent implements OnInit {
+
+  @ViewChild("chartPlaceholder", { read: ViewContainerRef }) chartPlaceholderRef: ViewContainerRef;
+  public chartElement: HTMLElement;
+  @ViewChild("formPlaceholder", { read: ViewContainerRef }) formPlaceholderRef: ViewContainerRef;
+  public formElement: HTMLElement;
 
     ngOnInit() {
         var margin = { top: 40, right: 10, bottom: 10, left: 10 },
@@ -47,7 +52,9 @@ export class TreemapComponent implements OnInit {
             .sticky(true)
             .value(function (d: any) { return d.size; });
 
-        var div = d3.select("#treemap-body").append("div")
+            this.chartElement = this.chartPlaceholderRef.element.nativeElement;
+
+        var div = d3.select(this.chartElement).append("div")
             .style("position", "relative")
             .style("width", (width + margin.left + margin.right) + "px")
             .style("height", (height + margin.top + margin.bottom) + "px")
@@ -64,7 +71,9 @@ export class TreemapComponent implements OnInit {
             .style("background", function (d: any) { return d.children ? color(d.name) : null; })
             .text(function (d: any) { return d.children ? null : d.name; });
 
-        d3.selectAll("input").on("change", function change() {
+            this.formElement = this.formPlaceholderRef.element.nativeElement;
+
+        d3.select(this.formElement).selectAll("input").on("change", function change() {
             var value = this.value === "count"
                 ? function () { return 1; }
                 : function (d: any) { return d.size; };

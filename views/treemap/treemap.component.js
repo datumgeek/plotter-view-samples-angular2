@@ -20,7 +20,8 @@ define(["require", "exports", '@angular/core'], function (require, exports, core
                 .size([width, height])
                 .sticky(true)
                 .value(function (d) { return d.size; });
-            var div = d3.select("#treemap-body").append("div")
+            this.chartElement = this.chartPlaceholderRef.element.nativeElement;
+            var div = d3.select(this.chartElement).append("div")
                 .style("position", "relative")
                 .style("width", (width + margin.left + margin.right) + "px")
                 .style("height", (height + margin.top + margin.bottom) + "px")
@@ -34,7 +35,8 @@ define(["require", "exports", '@angular/core'], function (require, exports, core
                 .call(position)
                 .style("background", function (d) { return d.children ? color(d.name) : null; })
                 .text(function (d) { return d.children ? null : d.name; });
-            d3.selectAll("input").on("change", function change() {
+            this.formElement = this.formPlaceholderRef.element.nativeElement;
+            d3.select(this.formElement).selectAll("input").on("change", function change() {
                 var value = this.value === "count"
                     ? function () { return 1; }
                     : function (d) { return d.size; };
@@ -434,11 +436,19 @@ define(["require", "exports", '@angular/core'], function (require, exports, core
             };
             return data;
         };
+        __decorate([
+            core_1.ViewChild("chartPlaceholder", { read: core_1.ViewContainerRef }), 
+            __metadata('design:type', core_1.ViewContainerRef)
+        ], TreemapComponent.prototype, "chartPlaceholderRef", void 0);
+        __decorate([
+            core_1.ViewChild("formPlaceholder", { read: core_1.ViewContainerRef }), 
+            __metadata('design:type', core_1.ViewContainerRef)
+        ], TreemapComponent.prototype, "formPlaceholderRef", void 0);
         TreemapComponent = __decorate([
             core_1.Component({
                 selector: 'v-treemap',
-                template: "\n        <form class=\"treemap\">\n            <label><input type=\"radio\" name=\"mode\" value=\"size\" checked> Size</label>\n            <label><input type=\"radio\" name=\"mode\" value=\"count\"> Count</label>\n        </form>\n        <div id=\"treemap-body\">\n        </div>\n    ",
-                styles: ["\n        :host >>> form.treemap {\n            position: absolute;\n            left: 10px;\n            top: 10px;\n        }\n\n        :host >>> .treemap-node {\n            border: solid 1px white;\n            font: 10px sans-serif;\n            line-height: 12px;\n            overflow: hidden;\n            position: absolute;\n            text-indent: 2px;\n        }\n        #treemap-body {\n            width: 100%;\n            height: 100%;\n        }\n    "]
+                template: "\n        <form #formPlaceholder class=\"treemap\">\n            <label><input type=\"radio\" name=\"mode\" value=\"size\" checked> Size</label>\n            <label><input type=\"radio\" name=\"mode\" value=\"count\"> Count</label>\n        </form>\n        <div #chartPlaceholder class=\"treemap-body\">\n        </div>\n    ",
+                styles: ["\n        :host >>> form.treemap {\n            position: absolute;\n            left: 10px;\n            top: 10px;\n        }\n\n        :host >>> .treemap-node {\n            border: solid 1px white;\n            font: 10px sans-serif;\n            line-height: 12px;\n            overflow: hidden;\n            position: absolute;\n            text-indent: 2px;\n        }\n        :host >>> .treemap-body {\n            width: 100%;\n            height: 100%;\n        }\n    "]
             }), 
             __metadata('design:paramtypes', [])
         ], TreemapComponent);
