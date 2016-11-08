@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShellService } from 'plotter-shell-angular2/dist/index';
 import { WindFarmService, IWindFarm } from '../windFarm.service';
 
 @Component({
@@ -22,10 +23,10 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
 })
 export class WindFarmTopTenComponent {
 
-    constructor(private windFarmService: WindFarmService) {
+    constructor(private windFarmService: WindFarmService, private shellService: ShellService) {
         let that = this;
 
-        setTimeout(function() {
+        setTimeout(function () {
             that.windFarmService.getWindFarmTopTen()
                 .then(windFarms => {
                     that.farms.push(...windFarms);
@@ -45,6 +46,16 @@ export class WindFarmTopTenComponent {
     public farms: IWindFarm[] = [];
 
     launchWindFarmDetails(farm: { Name: string }) {
-        alert(`Launch Details (${farm.Name})`);
+        // alert(`Launch Details (${farm.Name})`);
+        this.shellService.launchViewInstanceJSON({
+            "uniqueId": "vi-07",
+            "title": "Wind Farm: " + farm.Name,
+            "viewId": "view3",
+            "paneType": "main",
+            "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
+            "component": "WindFarmDetailsComponent",
+            "state": { "name": farm.Name },
+            "hideClose": false
+        });
     }
 }

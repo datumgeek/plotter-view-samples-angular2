@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { WindFarmTopTenComponent } from './windFarmTopTen/windFarmTopTen.component';
+import { WindFarmDetailsComponent } from './windFarmDetails/windFarmDetails.component';
 import { WindFarmService, IWindFarm } from './windFarm.service';
 import { TreemapComponent } from './treemap/treemap.component';
 import { SunburstComponent } from './sunburst/sunburst.component';
@@ -12,6 +13,7 @@ import { SunburstComponent } from './sunburst/sunburst.component';
 @NgModule({
   declarations: [
     WindFarmTopTenComponent,
+    WindFarmDetailsComponent,
     TreemapComponent,
     SunburstComponent
   ],

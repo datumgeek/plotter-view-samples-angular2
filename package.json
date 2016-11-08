@@ -26,9 +26,10 @@
     "@angular/common": "^2.1.2",
     "@angular/core": "2.1.2",
     "@angular/platform-browser-dynamic": "^2.1.2",
+    "d3": "^3.5.17",
+    "plotter-shell-angular2": "^0.2.5",
     "rxjs": "^5.0.0-rc.1",
     "tslint": "^3.15.1",
-    "typescript": "^2.0.6",
-    "d3": "^3.5.17"
+    "typescript": "^2.0.6"
   }
 }

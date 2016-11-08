@@ -7,11 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core', '../windFarm.service'], function (require, exports, core_1, windFarm_service_1) {
+define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/index', '../windFarm.service'], function (require, exports, core_1, index_1, windFarm_service_1) {
     "use strict";
     var WindFarmTopTenComponent = (function () {
-        function WindFarmTopTenComponent(windFarmService) {
+        function WindFarmTopTenComponent(windFarmService, shellService) {
             this.windFarmService = windFarmService;
+            this.shellService = shellService;
             this.farms = [];
             var that = this;
             setTimeout(function () {
@@ -31,7 +32,17 @@ define(["require", "exports", '@angular/core', '../windFarm.service'], function 
             });
         }
         WindFarmTopTenComponent.prototype.launchWindFarmDetails = function (farm) {
-            alert("Launch Details (" + farm.Name + ")");
+            // alert(`Launch Details (${farm.Name})`);
+            this.shellService.launchViewInstanceJSON({
+                "uniqueId": "vi-07",
+                "title": "Wind Farm: " + farm.Name,
+                "viewId": "view3",
+                "paneType": "main",
+                "cmodule": "plotter-view-samples-angular2/views/viewSamples.module",
+                "component": "WindFarmDetailsComponent",
+                "state": { "name": farm.Name },
+                "hideClose": false
+            });
         };
         WindFarmTopTenComponent = __decorate([
             core_1.Component({
@@ -39,7 +50,7 @@ define(["require", "exports", '@angular/core', '../windFarm.service'], function 
                 template: "\n        <h2>Top Ten Wind Farms</h2>\n        <p>(From OpenEI)</p>\n        <ul>\n            <li *ngFor=\"let farm of farms\" (click)=\"launchWindFarmDetails(farm)\">{{farm.Name}}</li>\n        </ul>\n    ",
                 styles: ["\n        h1 {\n            background-color: cadetblue;\n        }\n\n        p {\n            background-color: lightsalmon;\n        }\n    "]
             }), 
-            __metadata('design:paramtypes', [windFarm_service_1.WindFarmService])
+            __metadata('design:paramtypes', [windFarm_service_1.WindFarmService, index_1.ShellService])
         ], WindFarmTopTenComponent);
         return WindFarmTopTenComponent;
     }());
