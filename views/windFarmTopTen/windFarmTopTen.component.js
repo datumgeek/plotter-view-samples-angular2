@@ -11,16 +11,23 @@ define(["require", "exports", '@angular/core', '../windFarm.service'], function 
     "use strict";
     var WindFarmTopTenComponent = (function () {
         function WindFarmTopTenComponent(windFarmService) {
-            var _this = this;
             this.windFarmService = windFarmService;
             this.farms = [];
-            this.windFarmService.getWindFarmTopTen()
-                .then(function (windFarms) {
-                (_a = _this.farms).push.apply(_a, windFarms);
-                var _a;
-            })
-                .catch(function (err) {
-                alert("Error retrieving top ten wind farms.\r\n" + err);
+            var that = this;
+            setTimeout(function () {
+                that.windFarmService.getWindFarmTopTen()
+                    .then(function (windFarms) {
+                    (_a = that.farms).push.apply(_a, windFarms);
+                    var _a;
+                })
+                    .catch(function (err) {
+                    alert("Error retrieving top ten wind farms.\r\n" + err);
+                });
+            }, 2000);
+            that.windFarmService.addNewFarm({
+                Name: 'Add-a-farm',
+                TurbineCount: 4,
+                Description: 'This is the add-a-farm farm...'
             });
         }
         WindFarmTopTenComponent.prototype.launchWindFarmDetails = function (farm) {

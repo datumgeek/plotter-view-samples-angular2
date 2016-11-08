@@ -42,6 +42,9 @@ define(["require", "exports", '@angular/core'], function (require, exports, core
                 }
             });
         };
+        WindFarmService.prototype.addNewFarm = function (farm) {
+            this.windFarms.push(farm);
+        };
         WindFarmService = __decorate([
             core_1.Injectable(), 
             __metadata('design:paramtypes', [])

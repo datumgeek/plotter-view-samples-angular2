@@ -32,6 +32,10 @@ export class WindFarmService {
             }
         }); 
     }
+
+    public addNewFarm(farm: IWindFarm) {
+        this.windFarms.push(farm);
+    }
 }
 
 export interface IWindFarm {

@@ -23,13 +23,23 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
 export class WindFarmTopTenComponent {
 
     constructor(private windFarmService: WindFarmService) {
-        this.windFarmService.getWindFarmTopTen()
-            .then(windFarms => {
-                this.farms.push(...windFarms);
-            })
-            .catch(err => {
-                alert(`Error retrieving top ten wind farms.\r\n${err}`);
-            })
+        let that = this;
+
+        setTimeout(function() {
+            that.windFarmService.getWindFarmTopTen()
+                .then(windFarms => {
+                    that.farms.push(...windFarms);
+                })
+                .catch(err => {
+                    alert(`Error retrieving top ten wind farms.\r\n${err}`);
+                });
+        }, 2000);
+
+        that.windFarmService.addNewFarm({
+            Name: 'Add-a-farm',
+            TurbineCount: 4,
+            Description: 'This is the add-a-farm farm...'
+        });
     }
 
     public farms: IWindFarm[] = [];
