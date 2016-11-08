@@ -9,7 +9,7 @@ npm install http-server -g
 npm install typescript -g
 
 # in one bash shell
-http-serer --cors
+npm run serve
 
 # in another bash shell
 npm run build

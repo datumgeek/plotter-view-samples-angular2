@@ -1,7 +1,8 @@
+import { WindFarmService, IWindFarm } from '../windFarm.service';
 export declare class WindFarmTopTenComponent {
-    farms: {
-        Name: string;
-    }[];
+    private windFarmService;
+    constructor(windFarmService: WindFarmService);
+    farms: IWindFarm[];
     launchWindFarmDetails(farm: {
         Name: string;
     }): void;

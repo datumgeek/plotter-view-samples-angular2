@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/platform-browser', '@angular/core', '@angular/forms', '@angular/http', './windFarmTopTen/windFarmTopTen.component', './treemap/treemap.component', './sunburst/sunburst.component'], function (require, exports, platform_browser_1, core_1, forms_1, http_1, windFarmTopTen_component_1, treemap_component_1, sunburst_component_1) {
+define(["require", "exports", '@angular/common', '@angular/core', '@angular/forms', '@angular/http', './windFarmTopTen/windFarmTopTen.component', './windFarm.service', './treemap/treemap.component', './sunburst/sunburst.component'], function (require, exports, common_1, core_1, forms_1, http_1, windFarmTopTen_component_1, windFarm_service_1, treemap_component_1, sunburst_component_1) {
     "use strict";
     var ViewSamplesModule = (function () {
         function ViewSamplesModule() {
@@ -20,11 +20,14 @@ define(["require", "exports", '@angular/platform-browser', '@angular/core', '@an
                     sunburst_component_1.SunburstComponent
                 ],
                 imports: [
-                    platform_browser_1.BrowserModule,
+                    // BrowserModule,
+                    common_1.CommonModule,
                     forms_1.FormsModule,
                     http_1.HttpModule
                 ],
-                providers: [],
+                providers: [
+                    windFarm_service_1.WindFarmService
+                ],
             }), 
             __metadata('design:paramtypes', [])
         ], ViewSamplesModule);

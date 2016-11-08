@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WindFarmService, IWindFarm } from '../windFarm.service';
 
 @Component({
     selector: 'v-wind-farm-top-ten-component',
@@ -20,18 +21,18 @@ import { Component } from '@angular/core';
     `]
 })
 export class WindFarmTopTenComponent {
-    public farms = [
-        { Name: 'Green Ridge Power (1476)' },
-        { Name: 'Lake Erie Alternative (1400)' },
-        { Name: 'Wind Power Partners (967)' },
-        { Name: 'Solano County (600)' },
-        { Name: 'Zond-PanAero Windsystems (460)' },
-        { Name: 'Radial Wind Farm (390)' },
-        { Name: 'Apex Offshore Phase 2 (360)' },
-        { Name: 'Sky River Wind Farm (342)' },
-        { Name: 'Patterson Pass Wind Farm (336)' },
-        { Name: 'Hartland Wind Farm (333)' }
-    ];
+
+    constructor(private windFarmService: WindFarmService) {
+        this.windFarmService.getWindFarmTopTen()
+            .then(windFarms => {
+                this.farms.push(...windFarms);
+            })
+            .catch(err => {
+                alert(`Error retrieving top ten wind farms.\r\n${err}`);
+            })
+    }
+
+    public farms: IWindFarm[] = [];
 
     launchWindFarmDetails(farm: { Name: string }) {
         alert(`Launch Details (${farm.Name})`);

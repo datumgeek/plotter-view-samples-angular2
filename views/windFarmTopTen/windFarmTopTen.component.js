@@ -7,22 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core'], function (require, exports, core_1) {
+define(["require", "exports", '@angular/core', '../windFarm.service'], function (require, exports, core_1, windFarm_service_1) {
     "use strict";
     var WindFarmTopTenComponent = (function () {
-        function WindFarmTopTenComponent() {
-            this.farms = [
-                { Name: 'Green Ridge Power (1476)' },
-                { Name: 'Lake Erie Alternative (1400)' },
-                { Name: 'Wind Power Partners (967)' },
-                { Name: 'Solano County (600)' },
-                { Name: 'Zond-PanAero Windsystems (460)' },
-                { Name: 'Radial Wind Farm (390)' },
-                { Name: 'Apex Offshore Phase 2 (360)' },
-                { Name: 'Sky River Wind Farm (342)' },
-                { Name: 'Patterson Pass Wind Farm (336)' },
-                { Name: 'Hartland Wind Farm (333)' }
-            ];
+        function WindFarmTopTenComponent(windFarmService) {
+            var _this = this;
+            this.windFarmService = windFarmService;
+            this.farms = [];
+            this.windFarmService.getWindFarmTopTen()
+                .then(function (windFarms) {
+                (_a = _this.farms).push.apply(_a, windFarms);
+                var _a;
+            })
+                .catch(function (err) {
+                alert("Error retrieving top ten wind farms.\r\n" + err);
+            });
         }
         WindFarmTopTenComponent.prototype.launchWindFarmDetails = function (farm) {
             alert("Launch Details (" + farm.Name + ")");
@@ -33,7 +32,7 @@ define(["require", "exports", '@angular/core'], function (require, exports, core
                 template: "\n        <h2>Top Ten Wind Farms</h2>\n        <p>(From OpenEI)</p>\n        <ul>\n            <li *ngFor=\"let farm of farms\" (click)=\"launchWindFarmDetails(farm)\">{{farm.Name}}</li>\n        </ul>\n    ",
                 styles: ["\n        h1 {\n            background-color: cadetblue;\n        }\n\n        p {\n            background-color: lightsalmon;\n        }\n    "]
             }), 
-            __metadata('design:paramtypes', [])
+            __metadata('design:paramtypes', [windFarm_service_1.WindFarmService])
         ], WindFarmTopTenComponent);
         return WindFarmTopTenComponent;
     }());
