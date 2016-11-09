@@ -7,21 +7,20 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
     template: `
         <h2>Top Ten Wind Farms</h2>
         <p>(From OpenEI)</p>
+        <label><input type="checkbox" [(ngModel)]="reuseTab">Reuse Tab</label>
         <ul>
             <li *ngFor="let farm of farms" (click)="launchWindFarmDetails(farm)">{{farm.Name}}</li>
         </ul>
     `,
     styles: [`
-        h1 {
-            background-color: cadetblue;
-        }
-
-        p {
-            background-color: lightsalmon;
-        }
+        :host { margin: 5px; }
+        h1 { background-color: cadetblue; }
+        p { background-color: lightsalmon; }
     `]
 })
 export class WindFarmTopTenComponent {
+
+    public reuseTab: boolean = true;
 
     constructor(private windFarmService: WindFarmService, private shellService: ShellService) {
         let that = this;
@@ -56,6 +55,6 @@ export class WindFarmTopTenComponent {
             "component": "WindFarmDetailsComponent",
             "state": { "name": farm.Name },
             "hideClose": false
-        });
+        }, this.reuseTab);
     }
 }

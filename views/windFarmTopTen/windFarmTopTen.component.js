@@ -13,6 +13,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
         function WindFarmTopTenComponent(windFarmService, shellService) {
             this.windFarmService = windFarmService;
             this.shellService = shellService;
+            this.reuseTab = true;
             this.farms = [];
             var that = this;
             setTimeout(function () {
@@ -42,13 +43,13 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                 "component": "WindFarmDetailsComponent",
                 "state": { "name": farm.Name },
                 "hideClose": false
-            });
+            }, this.reuseTab);
         };
         WindFarmTopTenComponent = __decorate([
             core_1.Component({
                 selector: 'v-wind-farm-top-ten-component',
-                template: "\n        <h2>Top Ten Wind Farms</h2>\n        <p>(From OpenEI)</p>\n        <ul>\n            <li *ngFor=\"let farm of farms\" (click)=\"launchWindFarmDetails(farm)\">{{farm.Name}}</li>\n        </ul>\n    ",
-                styles: ["\n        h1 {\n            background-color: cadetblue;\n        }\n\n        p {\n            background-color: lightsalmon;\n        }\n    "]
+                template: "\n        <h2>Top Ten Wind Farms</h2>\n        <p>(From OpenEI)</p>\n        <label><input type=\"checkbox\" [(ngModel)]=\"reuseTab\">Reuse Tab</label>\n        <ul>\n            <li *ngFor=\"let farm of farms\" (click)=\"launchWindFarmDetails(farm)\">{{farm.Name}}</li>\n        </ul>\n    ",
+                styles: ["\n        :host { margin: 5px; }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
             }), 
             __metadata('design:paramtypes', [windFarm_service_1.WindFarmService, index_1.ShellService])
         ], WindFarmTopTenComponent);
