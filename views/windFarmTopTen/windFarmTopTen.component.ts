@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ShellService } from 'plotter-shell-angular2/dist/index';
-import { ParameterService } from 'plotter-shell-angular2/dist/index';
+import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
 import { WindFarmService, IWindFarm } from '../windFarm.service';
 
 @Component({
@@ -13,8 +12,14 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
             <li *ngFor="let farm of farms" (click)="launchWindFarmDetails(farm)">{{farm.Name}}</li>
         </ul>
         <hr />
+        <h2>ParameterService Parameters</h2>
         <ul>
             <li *ngFor="let item of parameterService.paramArray">{{item.key}}:{{item.value}}</li>
+        </ul>
+        <hr />
+        <h2>ResourceService Resources</h2>
+        <ul>
+            <li *ngFor="let key of resourceService.keys">{{key}}:{{resourceService.resources[key]}}</li>
         </ul>
     `,
     styles: [`
@@ -27,7 +32,11 @@ export class WindFarmTopTenComponent {
 
     public reuseTab: boolean = true;
 
-    constructor(private windFarmService: WindFarmService, private shellService: ShellService, public parameterService: ParameterService) {
+    constructor(
+        private windFarmService: WindFarmService, 
+        private shellService: ShellService, 
+        public parameterService: ParameterService,
+        public resourceService: ResourceService) {
         let that = this;
 
         setTimeout(function () {

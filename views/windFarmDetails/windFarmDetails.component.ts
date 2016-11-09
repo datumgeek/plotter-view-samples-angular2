@@ -24,6 +24,7 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
 export class WindFarmDetailsComponent {
     farm: IWindFarm = null;
     constructor(private windFarmService: WindFarmService) {}
+    
     setDynState(state: any) {
         if (state && state.name) {
             this.windFarmService.getWindFarm(state.name)
