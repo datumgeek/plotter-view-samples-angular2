@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ShellService } from 'plotter-shell-angular2/dist/index';
+import { ParameterService } from 'plotter-shell-angular2/dist/index';
 import { WindFarmService, IWindFarm } from '../windFarm.service';
 
 @Component({
@@ -10,6 +11,10 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
         <label><input type="checkbox" [(ngModel)]="reuseTab">Reuse Tab</label>
         <ul>
             <li *ngFor="let farm of farms" (click)="launchWindFarmDetails(farm)">{{farm.Name}}</li>
+        </ul>
+        <hr />
+        <ul>
+            <li *ngFor="let item of parameterService.paramArray">{{item.key}}:{{item.value}}</li>
         </ul>
     `,
     styles: [`
@@ -22,7 +27,7 @@ export class WindFarmTopTenComponent {
 
     public reuseTab: boolean = true;
 
-    constructor(private windFarmService: WindFarmService, private shellService: ShellService) {
+    constructor(private windFarmService: WindFarmService, private shellService: ShellService, public parameterService: ParameterService) {
         let that = this;
 
         setTimeout(function () {

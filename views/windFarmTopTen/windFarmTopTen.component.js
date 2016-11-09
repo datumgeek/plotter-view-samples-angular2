@@ -7,12 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/index', '../windFarm.service'], function (require, exports, core_1, index_1, windFarm_service_1) {
+define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/index', 'plotter-shell-angular2/dist/index', '../windFarm.service'], function (require, exports, core_1, index_1, index_2, windFarm_service_1) {
     "use strict";
     var WindFarmTopTenComponent = (function () {
-        function WindFarmTopTenComponent(windFarmService, shellService) {
+        function WindFarmTopTenComponent(windFarmService, shellService, parameterService) {
             this.windFarmService = windFarmService;
             this.shellService = shellService;
+            this.parameterService = parameterService;
             this.reuseTab = true;
             this.farms = [];
             var that = this;
@@ -48,10 +49,10 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
         WindFarmTopTenComponent = __decorate([
             core_1.Component({
                 selector: 'v-wind-farm-top-ten-component',
-                template: "\n        <h2>Top Ten Wind Farms</h2>\n        <p>(From OpenEI)</p>\n        <label><input type=\"checkbox\" [(ngModel)]=\"reuseTab\">Reuse Tab</label>\n        <ul>\n            <li *ngFor=\"let farm of farms\" (click)=\"launchWindFarmDetails(farm)\">{{farm.Name}}</li>\n        </ul>\n    ",
+                template: "\n        <h2>Top Ten Wind Farms</h2>\n        <p>(From OpenEI)</p>\n        <label><input type=\"checkbox\" [(ngModel)]=\"reuseTab\">Reuse Tab</label>\n        <ul>\n            <li *ngFor=\"let farm of farms\" (click)=\"launchWindFarmDetails(farm)\">{{farm.Name}}</li>\n        </ul>\n        <hr />\n        <ul>\n            <li *ngFor=\"let item of parameterService.paramArray\">{{item.key}}:{{item.value}}</li>\n        </ul>\n    ",
                 styles: ["\n        :host { margin: 5px; }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
             }), 
-            __metadata('design:paramtypes', [windFarm_service_1.WindFarmService, index_1.ShellService])
+            __metadata('design:paramtypes', [windFarm_service_1.WindFarmService, index_1.ShellService, index_2.ParameterService])
         ], WindFarmTopTenComponent);
         return WindFarmTopTenComponent;
     }());
