@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/common', '@angular/core', '@angular/forms', '@angular/http', './windFarmTopTen/windFarmTopTen.component', './windFarmDetails/windFarmDetails.component', './windFarm.service', './treemap/treemap.component', './sunburst/sunburst.component'], function (require, exports, common_1, core_1, forms_1, http_1, windFarmTopTen_component_1, windFarmDetails_component_1, windFarm_service_1, treemap_component_1, sunburst_component_1) {
+define(["require", "exports", '@angular/common', '@angular/core', '@angular/forms', '@angular/http', './windFarm.service', './stateTaxes/stateTaxes.service', './windFarmTopTen/windFarmTopTen.component', './windFarmDetails/windFarmDetails.component', './treemap/treemap.component', './sunburst/sunburst.component', './stateTaxes/stateTaxes.component'], function (require, exports, common_1, core_1, forms_1, http_1, windFarm_service_1, stateTaxes_service_1, windFarmTopTen_component_1, windFarmDetails_component_1, treemap_component_1, sunburst_component_1, stateTaxes_component_1) {
     "use strict";
     var ViewSamplesModule = (function () {
         function ViewSamplesModule() {
@@ -18,7 +18,8 @@ define(["require", "exports", '@angular/common', '@angular/core', '@angular/form
                     windFarmTopTen_component_1.WindFarmTopTenComponent,
                     windFarmDetails_component_1.WindFarmDetailsComponent,
                     treemap_component_1.TreemapComponent,
-                    sunburst_component_1.SunburstComponent
+                    sunburst_component_1.SunburstComponent,
+                    stateTaxes_component_1.StateTaxesComponent
                 ],
                 imports: [
                     // BrowserModule,
@@ -27,7 +28,8 @@ define(["require", "exports", '@angular/common', '@angular/core', '@angular/form
                     http_1.HttpModule
                 ],
                 providers: [
-                    windFarm_service_1.WindFarmService
+                    windFarm_service_1.WindFarmService,
+                    stateTaxes_service_1.StateTaxesService
                 ],
             }), 
             __metadata('design:paramtypes', [])

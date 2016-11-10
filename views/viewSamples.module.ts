@@ -4,18 +4,22 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { WindFarmService, IWindFarm } from './windFarm.service';
+import { StateTaxesService } from './stateTaxes/stateTaxes.service';
+
 import { WindFarmTopTenComponent } from './windFarmTopTen/windFarmTopTen.component';
 import { WindFarmDetailsComponent } from './windFarmDetails/windFarmDetails.component';
-import { WindFarmService, IWindFarm } from './windFarm.service';
 import { TreemapComponent } from './treemap/treemap.component';
 import { SunburstComponent } from './sunburst/sunburst.component';
+import { StateTaxesComponent } from './stateTaxes/stateTaxes.component';
 
 @NgModule({
   declarations: [
     WindFarmTopTenComponent,
     WindFarmDetailsComponent,
     TreemapComponent,
-    SunburstComponent
+    SunburstComponent,
+    StateTaxesComponent
   ],
   imports: [
     // BrowserModule,
@@ -24,7 +28,8 @@ import { SunburstComponent } from './sunburst/sunburst.component';
     HttpModule
   ],
   providers: [
-    WindFarmService
+    WindFarmService,
+    StateTaxesService
   ],
 })
 export default class ViewSamplesModule {}
