@@ -1,8 +1,11 @@
-import { ResourceService } from 'plotter-shell-angular2/dist/index';
+import { ResourceService, ShellService } from 'plotter-shell-angular2/dist/index';
 import { StateTaxesService, IStateInfo } from './stateTaxes.service';
 export declare class StateTaxesComponent {
     private stateTaxesService;
     resourceService: ResourceService;
+    shellService: ShellService;
     states: IStateInfo[];
-    constructor(stateTaxesService: StateTaxesService, resourceService: ResourceService);
+    currentState: IStateInfo;
+    constructor(stateTaxesService: StateTaxesService, resourceService: ResourceService, shellService: ShellService);
+    selectState: (state: IStateInfo) => void;
 }
