@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/common', '@angular/core', '@angular/forms', '@angular/http', './windFarm.service', './stateTaxes/stateTaxes.service', './windFarmTopTen/windFarmTopTen.component', './windFarmDetails/windFarmDetails.component', './treemap/treemap.component', './sunburst/sunburst.component', './stateTaxes/stateTaxes.component'], function (require, exports, common_1, core_1, forms_1, http_1, windFarm_service_1, stateTaxes_service_1, windFarmTopTen_component_1, windFarmDetails_component_1, treemap_component_1, sunburst_component_1, stateTaxes_component_1) {
+define(["require", "exports", '@angular/common', '@angular/core', '@angular/forms', '@angular/http', './windFarm.service', './stateTaxes/stateTaxes.service', './windFarmTopTen/windFarmTopTen.component', './windFarmDetails/windFarmDetails.component', './treemap/treemap.component', './sunburst/sunburst.component', './stateTaxes/stateTaxes.component', './tabLayoutTest/tabLayoutTest.component', './pageLayoutTest/pageLayoutTest.component'], function (require, exports, common_1, core_1, forms_1, http_1, windFarm_service_1, stateTaxes_service_1, windFarmTopTen_component_1, windFarmDetails_component_1, treemap_component_1, sunburst_component_1, stateTaxes_component_1, tabLayoutTest_component_1, pageLayoutTest_component_1) {
     "use strict";
     var ViewSamplesModule = (function () {
         function ViewSamplesModule() {
@@ -19,7 +19,9 @@ define(["require", "exports", '@angular/common', '@angular/core', '@angular/form
                     windFarmDetails_component_1.WindFarmDetailsComponent,
                     treemap_component_1.TreemapComponent,
                     sunburst_component_1.SunburstComponent,
-                    stateTaxes_component_1.StateTaxesComponent
+                    stateTaxes_component_1.StateTaxesComponent,
+                    tabLayoutTest_component_1.TabLayoutTestComponent,
+                    pageLayoutTest_component_1.PageLayoutTestComponent
                 ],
                 imports: [
                     // BrowserModule,

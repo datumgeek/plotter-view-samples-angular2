@@ -12,6 +12,8 @@ import { WindFarmDetailsComponent } from './windFarmDetails/windFarmDetails.comp
 import { TreemapComponent } from './treemap/treemap.component';
 import { SunburstComponent } from './sunburst/sunburst.component';
 import { StateTaxesComponent } from './stateTaxes/stateTaxes.component';
+import { TabLayoutTestComponent } from './tabLayoutTest/tabLayoutTest.component';
+import { PageLayoutTestComponent } from './pageLayoutTest/pageLayoutTest.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { StateTaxesComponent } from './stateTaxes/stateTaxes.component';
     WindFarmDetailsComponent,
     TreemapComponent,
     SunburstComponent,
-    StateTaxesComponent
+    StateTaxesComponent,
+    TabLayoutTestComponent,
+    PageLayoutTestComponent
   ],
   imports: [
     // BrowserModule,
