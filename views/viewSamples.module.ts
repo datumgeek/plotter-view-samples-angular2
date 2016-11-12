@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ShellModule } from 'plotter-shell-angular2/dist/index';
 
 import { WindFarmService, IWindFarm } from './windFarm.service';
 import { StateTaxesService } from './stateTaxes/stateTaxes.service';
@@ -29,7 +30,8 @@ import { PageLayoutTestComponent } from './pageLayoutTest/pageLayoutTest.compone
     // BrowserModule,
     CommonModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ShellModule
   ],
   providers: [
     WindFarmService,

@@ -15,12 +15,17 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
             this.parameterService = parameterService;
             this.resourceService = resourceService;
             this.reuseTab = true;
+            this.state = {
+                layout: {
+                    title: '--- Tab Layout Test ---'
+                }
+            };
             var that = this;
         }
         TabLayoutTestComponent = __decorate([
             core_1.Component({
                 selector: 'v-tab-layout-test',
-                template: "\n        <h2>Tab Layout Test</h2>\n    ",
+                template: "\n        <h2>Tab Layout Test</h2>\n        <p-tab-layout [state]=\"state\"></p-tab-layout>\n    ",
                 styles: ["\n        :host { margin: 5px; }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
             }), 
             __metadata('design:paramtypes', [index_1.ShellService, index_1.ParameterService, index_1.ResourceService])

@@ -5,4 +5,9 @@ export declare class TabLayoutTestComponent {
     resourceService: ResourceService;
     reuseTab: boolean;
     constructor(shellService: ShellService, parameterService: ParameterService, resourceService: ResourceService);
+    state: {
+        layout: {
+            title: string;
+        };
+    };
 }

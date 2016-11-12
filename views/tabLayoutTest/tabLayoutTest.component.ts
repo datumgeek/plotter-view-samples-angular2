@@ -5,6 +5,7 @@ import { ShellService, ParameterService, ResourceService } from 'plotter-shell-a
     selector: 'v-tab-layout-test',
     template: `
         <h2>Tab Layout Test</h2>
+        <p-tab-layout [state]="state"></p-tab-layout>
     `,
     styles: [`
         :host { margin: 5px; }
@@ -21,5 +22,11 @@ export class TabLayoutTestComponent {
         public parameterService: ParameterService,
         public resourceService: ResourceService) {
         let that = this;
+    }
+
+    state = {
+        layout: {
+            title: '--- Tab Layout Test ---'
+        }
     }
 }
