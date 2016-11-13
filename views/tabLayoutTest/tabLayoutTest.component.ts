@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
 
 @Component({
@@ -13,7 +13,7 @@ import { ShellService, ParameterService, ResourceService } from 'plotter-shell-a
         p { background-color: lightsalmon; }
     `]
 })
-export class TabLayoutTestComponent {
+export class TabLayoutTestComponent implements OnInit {
 
     public reuseTab: boolean = true;
 
@@ -26,7 +26,39 @@ export class TabLayoutTestComponent {
 
     state = {
         layout: {
-            title: '--- Tab Layout Test ---'
+            title: '--- Tab Layout Test ---',
+            header: {
+                uniqueId: 'x7',
+                cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                component: "WindFarmDetailsComponent",
+                state: { "name": 'Solano County' }
+            },
+            activeTab: <any>null,
+            tabs: [{
+                title: '--- Tab One ---',
+                header: {
+                    uniqueId: 'x7',
+                    cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                    component: "WindFarmDetailsComponent",
+                    state: { "name": 'Zond-PanAero Windsystems' }
+                }
+            }
+            , {
+                title: '--- Tab Two ---',
+                header: {
+                    uniqueId: 'x7',
+                    cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                    component: "WindFarmDetailsComponent",
+                    state: { "name": 'Radial Wind Farm' }
+                }
+            }
+            ]
+        }
+    }
+
+    ngOnInit() {
+        if (this.state.layout.tabs && this.state.layout.tabs.length > 0) {
+            this.state.layout.activeTab = this.state.layout.tabs[0];
         }
     }
 }

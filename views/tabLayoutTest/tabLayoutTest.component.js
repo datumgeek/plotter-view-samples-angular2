@@ -17,11 +17,42 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
             this.reuseTab = true;
             this.state = {
                 layout: {
-                    title: '--- Tab Layout Test ---'
+                    title: '--- Tab Layout Test ---',
+                    header: {
+                        uniqueId: 'x7',
+                        cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                        component: "WindFarmDetailsComponent",
+                        state: { "name": 'Solano County' }
+                    },
+                    activeTab: null,
+                    tabs: [{
+                            title: '--- Tab One ---',
+                            header: {
+                                uniqueId: 'x7',
+                                cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                                component: "WindFarmDetailsComponent",
+                                state: { "name": 'Zond-PanAero Windsystems' }
+                            }
+                        },
+                        {
+                            title: '--- Tab Two ---',
+                            header: {
+                                uniqueId: 'x7',
+                                cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                                component: "WindFarmDetailsComponent",
+                                state: { "name": 'Radial Wind Farm' }
+                            }
+                        }
+                    ]
                 }
             };
             var that = this;
         }
+        TabLayoutTestComponent.prototype.ngOnInit = function () {
+            if (this.state.layout.tabs && this.state.layout.tabs.length > 0) {
+                this.state.layout.activeTab = this.state.layout.tabs[0];
+            }
+        };
         TabLayoutTestComponent = __decorate([
             core_1.Component({
                 selector: 'v-tab-layout-test',

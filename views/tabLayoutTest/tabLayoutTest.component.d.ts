@@ -1,5 +1,6 @@
+import { OnInit } from '@angular/core';
 import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
-export declare class TabLayoutTestComponent {
+export declare class TabLayoutTestComponent implements OnInit {
     private shellService;
     parameterService: ParameterService;
     resourceService: ResourceService;
@@ -8,6 +9,27 @@ export declare class TabLayoutTestComponent {
     state: {
         layout: {
             title: string;
+            header: {
+                uniqueId: string;
+                cmodule: string;
+                component: string;
+                state: {
+                    "name": string;
+                };
+            };
+            activeTab: any;
+            tabs: {
+                title: string;
+                header: {
+                    uniqueId: string;
+                    cmodule: string;
+                    component: string;
+                    state: {
+                        "name": string;
+                    };
+                };
+            }[];
         };
     };
+    ngOnInit(): void;
 }
