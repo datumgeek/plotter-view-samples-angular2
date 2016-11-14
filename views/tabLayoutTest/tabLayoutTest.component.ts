@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
 
 @Component({
     selector: 'v-tab-layout-test',
     template: `
         <h2>Tab Layout Test</h2>
-        <p-tab-layout [state]="state"></p-tab-layout>
+        <p-tab-layout [state]="state" [p-parent-visible]="parentVisible"></p-tab-layout>
     `,
     styles: [`
         :host { margin: 5px; }
@@ -14,6 +14,8 @@ import { ShellService, ParameterService, ResourceService } from 'plotter-shell-a
     `]
 })
 export class TabLayoutTestComponent implements OnInit {
+
+    @Input('p-parent-visible') parentVisible: boolean = true;
 
     public reuseTab: boolean = true;
 
