@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { WindFarmService, IWindFarm } from '../windFarm.service';
 
 @Component({
@@ -22,7 +22,11 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
     `]
 })
 export class WindFarmDetailsComponent {
+
+    @Input('p-parent-visible') parentVisible: boolean = true;
+
     farm: IWindFarm = null;
+
     constructor(private windFarmService: WindFarmService) {}
     
     setDynState(state: any) {

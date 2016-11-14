@@ -15,6 +15,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
             this.shellService = shellService;
             this.parameterService = parameterService;
             this.resourceService = resourceService;
+            this.parentVisible = true;
             this.reuseTab = true;
             this.farms = [];
             var that = this;
@@ -47,6 +48,10 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                 "hideClose": false
             }, this.reuseTab);
         };
+        __decorate([
+            core_1.Input('p-parent-visible'), 
+            __metadata('design:type', Boolean)
+        ], WindFarmTopTenComponent.prototype, "parentVisible", void 0);
         WindFarmTopTenComponent = __decorate([
             core_1.Component({
                 selector: 'v-wind-farm-top-ten-component',

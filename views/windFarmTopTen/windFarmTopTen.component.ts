@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
 import { WindFarmService, IWindFarm } from '../windFarm.service';
 
@@ -29,6 +29,8 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
     `]
 })
 export class WindFarmTopTenComponent {
+
+    @Input('p-parent-visible') parentVisible: boolean = true;
 
     public reuseTab: boolean = true;
 

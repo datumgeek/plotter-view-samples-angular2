@@ -12,6 +12,7 @@ define(["require", "exports", '@angular/core', '../windFarm.service'], function 
     var WindFarmDetailsComponent = (function () {
         function WindFarmDetailsComponent(windFarmService) {
             this.windFarmService = windFarmService;
+            this.parentVisible = true;
             this.farm = null;
         }
         WindFarmDetailsComponent.prototype.setDynState = function (state) {
@@ -26,6 +27,10 @@ define(["require", "exports", '@angular/core', '../windFarm.service'], function 
                 });
             }
         };
+        __decorate([
+            core_1.Input('p-parent-visible'), 
+            __metadata('design:type', Boolean)
+        ], WindFarmDetailsComponent.prototype, "parentVisible", void 0);
         WindFarmDetailsComponent = __decorate([
             core_1.Component({
                 selector: 'v-wind-farm-details',

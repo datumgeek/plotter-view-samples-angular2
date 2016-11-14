@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
 
 @Component({
@@ -13,6 +13,9 @@ import { ShellService, ParameterService, ResourceService } from 'plotter-shell-a
     `]
 })
 export class PageLayoutTestComponent {
+
+    @Input() state: any;
+    @Input('p-parent-visible') parentVisible: boolean = true;
 
     public reuseTab: boolean = true;
 

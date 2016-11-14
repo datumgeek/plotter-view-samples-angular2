@@ -24,7 +24,6 @@ define(["require", "exports", '@angular/common', '@angular/core', '@angular/form
                     pageLayoutTest_component_1.PageLayoutTestComponent
                 ],
                 imports: [
-                    // BrowserModule,
                     common_1.CommonModule,
                     forms_1.FormsModule,
                     http_1.HttpModule,
