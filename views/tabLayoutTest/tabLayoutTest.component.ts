@@ -20,7 +20,7 @@ export class TabLayoutTestComponent implements OnInit {
     public reuseTab: boolean = true;
 
     constructor(
-        private shellService: ShellService, 
+        private shellService: ShellService,
         public parameterService: ParameterService,
         public resourceService: ResourceService) {
         let that = this;
@@ -43,9 +43,28 @@ export class TabLayoutTestComponent implements OnInit {
                     cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                     component: "WindFarmDetailsComponent",
                     state: { "name": 'Zond-PanAero Windsystems' }
+                },
+                tabs: [{
+                    title: '--- Tab One ---',
+                    header: {
+                        uniqueId: 'x7',
+                        cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                        component: "WindFarmDetailsComponent",
+                        state: { "name": 'Zond-PanAero Windsystems' }
+                    }
                 }
+                    , {
+                    title: '--- Tab Two ---',
+                    header: {
+                        uniqueId: 'x7',
+                        cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                        component: "WindFarmDetailsComponent",
+                        state: { "name": 'Radial Wind Farm' }
+                    }
+                }
+                ]
             }
-            , {
+                , {
                 title: '--- Tab Two ---',
                 header: {
                     uniqueId: 'x7',

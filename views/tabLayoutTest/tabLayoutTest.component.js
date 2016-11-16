@@ -33,7 +33,26 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                                 cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                                 component: "WindFarmDetailsComponent",
                                 state: { "name": 'Zond-PanAero Windsystems' }
-                            }
+                            },
+                            tabs: [{
+                                    title: '--- Tab One ---',
+                                    header: {
+                                        uniqueId: 'x7',
+                                        cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                                        component: "WindFarmDetailsComponent",
+                                        state: { "name": 'Zond-PanAero Windsystems' }
+                                    }
+                                },
+                                {
+                                    title: '--- Tab Two ---',
+                                    header: {
+                                        uniqueId: 'x7',
+                                        cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                                        component: "WindFarmDetailsComponent",
+                                        state: { "name": 'Radial Wind Farm' }
+                                    }
+                                }
+                            ]
                         },
                         {
                             title: '--- Tab Two ---',

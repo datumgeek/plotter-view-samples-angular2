@@ -19,7 +19,7 @@ export declare class TabLayoutTestComponent implements OnInit {
                 };
             };
             activeTab: any;
-            tabs: {
+            tabs: ({
                 title: string;
                 header: {
                     uniqueId: string;
@@ -29,7 +29,28 @@ export declare class TabLayoutTestComponent implements OnInit {
                         "name": string;
                     };
                 };
-            }[];
+                tabs: {
+                    title: string;
+                    header: {
+                        uniqueId: string;
+                        cmodule: string;
+                        component: string;
+                        state: {
+                            "name": string;
+                        };
+                    };
+                }[];
+            } | {
+                title: string;
+                header: {
+                    uniqueId: string;
+                    cmodule: string;
+                    component: string;
+                    state: {
+                        "name": string;
+                    };
+                };
+            })[];
         };
     };
     ngOnInit(): void;
