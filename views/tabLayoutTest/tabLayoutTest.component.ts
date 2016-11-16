@@ -5,17 +5,20 @@ import { ShellService, ParameterService, ResourceService } from 'plotter-shell-a
     selector: 'v-tab-layout-test',
     template: `
         <h2>Tab Layout Test</h2>
-        <p-tab-layout [state]="state" [p-parent-visible]="parentVisible"></p-tab-layout>
+        <p-tab-layout [state]="state" [p-parent-visible]="pParentVisible"></p-tab-layout>
     `,
     styles: [`
-        :host { margin: 5px; }
+        :host { 
+            margin: 2px;
+            border: 2px solid black; 
+        }
         h1 { background-color: cadetblue; }
         p { background-color: lightsalmon; }
     `]
 })
 export class TabLayoutTestComponent implements OnInit {
 
-    @Input('p-parent-visible') parentVisible: boolean = true;
+    @Input('p-parent-visible') pParentVisible: boolean = true;
 
     public reuseTab: boolean = true;
 
@@ -45,7 +48,7 @@ export class TabLayoutTestComponent implements OnInit {
                     state: { "name": 'Zond-PanAero Windsystems' }
                 },
                 tabs: [{
-                    title: '--- Tab One ---',
+                    title: '--- Tab a ---',
                     header: {
                         uniqueId: 'x7',
                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
@@ -53,26 +56,25 @@ export class TabLayoutTestComponent implements OnInit {
                         state: { "name": 'Zond-PanAero Windsystems' }
                     }
                 }
-                    , {
-                    title: '--- Tab Two ---',
+                , {
+                    title: '--- Tab b ---',
                     header: {
                         uniqueId: 'x7',
                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                         component: "WindFarmDetailsComponent",
                         state: { "name": 'Radial Wind Farm' }
                     }
-                }
-                ]
+                }]
             }
-                , {
-                title: '--- Tab Two ---',
-                header: {
-                    uniqueId: 'x7',
-                    cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
-                    component: "WindFarmDetailsComponent",
-                    state: { "name": 'Radial Wind Farm' }
-                }
+            , {
+            title: '--- Tab Two ---',
+            header: {
+                uniqueId: 'x7',
+                cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
+                component: "WindFarmDetailsComponent",
+                state: { "name": 'Radial Wind Farm' }
             }
+        }
             ]
         }
     }

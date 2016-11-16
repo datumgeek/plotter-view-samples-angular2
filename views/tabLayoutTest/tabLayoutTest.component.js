@@ -14,7 +14,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
             this.shellService = shellService;
             this.parameterService = parameterService;
             this.resourceService = resourceService;
-            this.parentVisible = true;
+            this.pParentVisible = true;
             this.reuseTab = true;
             this.state = {
                 layout: {
@@ -35,7 +35,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                                 state: { "name": 'Zond-PanAero Windsystems' }
                             },
                             tabs: [{
-                                    title: '--- Tab One ---',
+                                    title: '--- Tab a ---',
                                     header: {
                                         uniqueId: 'x7',
                                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
@@ -44,15 +44,14 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                                     }
                                 },
                                 {
-                                    title: '--- Tab Two ---',
+                                    title: '--- Tab b ---',
                                     header: {
                                         uniqueId: 'x7',
                                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                                         component: "WindFarmDetailsComponent",
                                         state: { "name": 'Radial Wind Farm' }
                                     }
-                                }
-                            ]
+                                }]
                         },
                         {
                             title: '--- Tab Two ---',
@@ -76,12 +75,12 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
         __decorate([
             core_1.Input('p-parent-visible'), 
             __metadata('design:type', Boolean)
-        ], TabLayoutTestComponent.prototype, "parentVisible", void 0);
+        ], TabLayoutTestComponent.prototype, "pParentVisible", void 0);
         TabLayoutTestComponent = __decorate([
             core_1.Component({
                 selector: 'v-tab-layout-test',
-                template: "\n        <h2>Tab Layout Test</h2>\n        <p-tab-layout [state]=\"state\" [p-parent-visible]=\"parentVisible\"></p-tab-layout>\n    ",
-                styles: ["\n        :host { margin: 5px; }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
+                template: "\n        <h2>Tab Layout Test</h2>\n        <p-tab-layout [state]=\"state\" [p-parent-visible]=\"pParentVisible\"></p-tab-layout>\n    ",
+                styles: ["\n        :host { \n            margin: 2px;\n            border: 2px solid black; \n        }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
             }), 
             __metadata('design:paramtypes', [index_1.ShellService, index_1.ParameterService, index_1.ResourceService])
         ], TabLayoutTestComponent);

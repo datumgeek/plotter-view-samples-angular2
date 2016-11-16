@@ -15,7 +15,7 @@ import { ShellService, ParameterService, ResourceService } from 'plotter-shell-a
 export class PageLayoutTestComponent {
 
     @Input() state: any;
-    @Input('p-parent-visible') parentVisible: boolean = true;
+    @Input('p-parent-visible') pParentVisible: boolean = true;
 
     public reuseTab: boolean = true;
 

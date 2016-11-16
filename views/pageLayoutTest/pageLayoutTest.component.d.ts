@@ -4,7 +4,7 @@ export declare class PageLayoutTestComponent {
     parameterService: ParameterService;
     resourceService: ResourceService;
     state: any;
-    parentVisible: boolean;
+    pParentVisible: boolean;
     reuseTab: boolean;
     constructor(shellService: ShellService, parameterService: ParameterService, resourceService: ResourceService);
 }

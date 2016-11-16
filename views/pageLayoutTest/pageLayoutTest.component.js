@@ -14,7 +14,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
             this.shellService = shellService;
             this.parameterService = parameterService;
             this.resourceService = resourceService;
-            this.parentVisible = true;
+            this.pParentVisible = true;
             this.reuseTab = true;
             var that = this;
         }
@@ -25,7 +25,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
         __decorate([
             core_1.Input('p-parent-visible'), 
             __metadata('design:type', Boolean)
-        ], PageLayoutTestComponent.prototype, "parentVisible", void 0);
+        ], PageLayoutTestComponent.prototype, "pParentVisible", void 0);
         PageLayoutTestComponent = __decorate([
             core_1.Component({
                 selector: 'v-page-layout-test',
