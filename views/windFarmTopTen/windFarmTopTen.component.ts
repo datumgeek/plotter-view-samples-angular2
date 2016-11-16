@@ -30,8 +30,6 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
 })
 export class WindFarmTopTenComponent {
 
-    @Input('p-parent-visible') parentVisible: boolean = true;
-
     public reuseTab: boolean = true;
 
     constructor(

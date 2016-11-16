@@ -23,8 +23,6 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
 })
 export class WindFarmDetailsComponent {
 
-    @Input('p-parent-visible') parentVisible: boolean = true;
-
     farm: IWindFarm = null;
 
     constructor(private windFarmService: WindFarmService) {}

@@ -5,7 +5,6 @@ export declare class WindFarmTopTenComponent {
     private shellService;
     parameterService: ParameterService;
     resourceService: ResourceService;
-    parentVisible: boolean;
     reuseTab: boolean;
     constructor(windFarmService: WindFarmService, shellService: ShellService, parameterService: ParameterService, resourceService: ResourceService);
     farms: IWindFarm[];
