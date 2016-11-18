@@ -20,6 +20,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                 layout: {
                     title: '--- Tab Layout Test :) ---',
                     header: {
+                        upHeight: 180,
                         uniqueId: 'x7',
                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                         component: "WindFarmDetailsComponent",
@@ -29,6 +30,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                     tabs: [{
                             title: '--- Tab One ---',
                             header: {
+                                upHeight: 180,
                                 uniqueId: 'x7',
                                 cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                                 component: "WindFarmDetailsComponent",
@@ -37,6 +39,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                             tabs: [{
                                     title: '--- Tab a ---',
                                     header: {
+                                        upHeight: 180,
                                         uniqueId: 'x7',
                                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                                         component: "WindFarmDetailsComponent",
@@ -46,6 +49,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                                 {
                                     title: '--- Tab b ---',
                                     header: {
+                                        upHeight: 180,
                                         uniqueId: 'x7',
                                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                                         component: "WindFarmDetailsComponent",
@@ -56,6 +60,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                         {
                             title: '--- Tab Two ---',
                             header: {
+                                upHeight: 180,
                                 uniqueId: 'x7',
                                 cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                                 component: "WindFarmDetailsComponent",

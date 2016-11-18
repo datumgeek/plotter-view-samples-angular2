@@ -11,6 +11,7 @@ export declare class TabLayoutTestComponent implements OnInit {
         layout: {
             title: string;
             header: {
+                upHeight: number;
                 uniqueId: string;
                 cmodule: string;
                 component: string;
@@ -22,6 +23,7 @@ export declare class TabLayoutTestComponent implements OnInit {
             tabs: ({
                 title: string;
                 header: {
+                    upHeight: number;
                     uniqueId: string;
                     cmodule: string;
                     component: string;
@@ -32,6 +34,7 @@ export declare class TabLayoutTestComponent implements OnInit {
                 tabs: {
                     title: string;
                     header: {
+                        upHeight: number;
                         uniqueId: string;
                         cmodule: string;
                         component: string;
@@ -43,6 +46,7 @@ export declare class TabLayoutTestComponent implements OnInit {
             } | {
                 title: string;
                 header: {
+                    upHeight: number;
                     uniqueId: string;
                     cmodule: string;
                     component: string;

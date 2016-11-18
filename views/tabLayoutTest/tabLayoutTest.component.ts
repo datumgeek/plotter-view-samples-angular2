@@ -40,6 +40,7 @@ export class TabLayoutTestComponent implements OnInit {
         layout: {
             title: '--- Tab Layout Test :) ---',
             header: {
+                upHeight: 180,
                 uniqueId: 'x7',
                 cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                 component: "WindFarmDetailsComponent",
@@ -49,6 +50,7 @@ export class TabLayoutTestComponent implements OnInit {
             tabs: [{
                 title: '--- Tab One ---',
                 header: {
+                    upHeight: 180,
                     uniqueId: 'x7',
                     cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                     component: "WindFarmDetailsComponent",
@@ -57,6 +59,7 @@ export class TabLayoutTestComponent implements OnInit {
                 tabs: [{
                     title: '--- Tab a ---',
                     header: {
+                        upHeight: 180,
                         uniqueId: 'x7',
                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                         component: "WindFarmDetailsComponent",
@@ -66,6 +69,7 @@ export class TabLayoutTestComponent implements OnInit {
                 , {
                     title: '--- Tab b ---',
                     header: {
+                        upHeight: 180,
                         uniqueId: 'x7',
                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                         component: "WindFarmDetailsComponent",
@@ -76,6 +80,7 @@ export class TabLayoutTestComponent implements OnInit {
             , {
             title: '--- Tab Two ---',
             header: {
+                upHeight: 180,
                 uniqueId: 'x7',
                 cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
                 component: "WindFarmDetailsComponent",
