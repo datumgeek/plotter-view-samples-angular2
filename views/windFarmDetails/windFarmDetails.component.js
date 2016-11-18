@@ -30,7 +30,7 @@ define(["require", "exports", '@angular/core', '../windFarm.service'], function 
             core_1.Component({
                 selector: 'v-wind-farm-details',
                 template: "\n        <h2>Wind Farm Details</h2>\n        <div *ngIf=\"farm\">\n            <h3>{{farm.Name}}</h3>\n            <p><b>{{farm.Name}}</b> has {{farm.TurbineCount | number}} wind turbine<span *ngIf=\"farm.TurbineCount !== 1\">s</span>.</p>\n            <p>{{farm.Description}}\n        </div>\n    ",
-                styles: ["\n        h1 {\n            background-color: cadetblue;\n        }\n\n        p {\n            background-color: lightsalmon;\n        }\n    "]
+                styles: ["\n        h1 {\n            background-color: cadetblue;\n        }\n\n        p {\n            background-color: white;\n        }\n    "]
             }), 
             __metadata('design:paramtypes', [windFarm_service_1.WindFarmService])
         ], WindFarmDetailsComponent);

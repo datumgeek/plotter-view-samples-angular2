@@ -18,7 +18,7 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
             this.reuseTab = true;
             this.state = {
                 layout: {
-                    title: '--- Tab Layout Test ---',
+                    title: '--- Tab Layout Test :) ---',
                     header: {
                         uniqueId: 'x7',
                         cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
@@ -79,8 +79,8 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
         TabLayoutTestComponent = __decorate([
             core_1.Component({
                 selector: 'v-tab-layout-test',
-                template: "\n        <h2>Tab Layout Test</h2>\n        <p-tab-layout [state]=\"state\" [p-parent-visible]=\"pParentVisible\"></p-tab-layout>\n    ",
-                styles: ["\n        :host { \n            margin: 2px;\n            border: 2px solid black; \n        }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
+                template: "\n        <p-tab-layout [state]=\"state\" [p-parent-visible]=\"pParentVisible\"></p-tab-layout>\n    ",
+                styles: ["\n        :host {\n            display: flex;\n            flex-direction: column;\n            background-color: white;\n            padding: 10px;\n            width: 100%;\n            height: 100%;\n        }\n        :host > p-tab-layout {\n            position: relative;\n            flex: 1 0 auto;\n        }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
             }), 
             __metadata('design:paramtypes', [index_1.ShellService, index_1.ParameterService, index_1.ResourceService])
         ], TabLayoutTestComponent);

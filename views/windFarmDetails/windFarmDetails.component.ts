@@ -17,7 +17,7 @@ import { WindFarmService, IWindFarm } from '../windFarm.service';
         }
 
         p {
-            background-color: lightsalmon;
+            background-color: white;
         }
     `]
 })

@@ -4,13 +4,20 @@ import { ShellService, ParameterService, ResourceService } from 'plotter-shell-a
 @Component({
     selector: 'v-tab-layout-test',
     template: `
-        <h2>Tab Layout Test</h2>
         <p-tab-layout [state]="state" [p-parent-visible]="pParentVisible"></p-tab-layout>
     `,
     styles: [`
-        :host { 
-            margin: 2px;
-            border: 2px solid black; 
+        :host {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+        }
+        :host > p-tab-layout {
+            position: relative;
+            flex: 1 0 auto;
         }
         h1 { background-color: cadetblue; }
         p { background-color: lightsalmon; }
@@ -31,7 +38,7 @@ export class TabLayoutTestComponent implements OnInit {
 
     state = {
         layout: {
-            title: '--- Tab Layout Test ---',
+            title: '--- Tab Layout Test :) ---',
             header: {
                 uniqueId: 'x7',
                 cmodule: "plotter-view-samples-angular2/views/viewSamples.module",
