@@ -4,11 +4,13 @@ Welcome to the plotter-view-samples-angular2 project, a place where you can find
 
 ## quick start
 
+### from a bash shell:
+
 ```bash
 npm install http-server -g
 npm install typescript -g
+npm install
 
-# in one bash shell
 npm run serve
 
 # in another bash shell
@@ -23,7 +25,6 @@ npm run build
 
 ## making a copy of this repository
 
-```bash
 # crete a directory for the new copy
 mkdir plotter-view-lab-angular2
 cd plotter-view-lab-angular2
