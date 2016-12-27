@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/index', './stateTaxes.service'], function (require, exports, core_1, index_1, stateTaxes_service_1) {
+define(["require", "exports", "@angular/core", "plotter-shell-angular2", "./stateTaxes.service"], function (require, exports, core_1, plotter_shell_angular2_1, stateTaxes_service_1) {
     "use strict";
     var StateTaxesComponent = (function () {
         function StateTaxesComponent(stateTaxesService, resourceService, shellService) {
@@ -37,16 +37,18 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                 _this.currentState = _this.states.find(function (s) { return s.name === data.state.name; });
             }, function (err) { alert("err: " + JSON.stringify(err)); }, function () { alert("complete."); });
         }
-        StateTaxesComponent = __decorate([
-            core_1.Component({
-                selector: 'v-state-taxes',
-                template: "\n        <h2>State Taxes</h2>\n        <p>US State Names and Average State Income Tax</p>\n        <p *ngIf=\"currentState\">Selected: {{currentState.name}}\n        <ul>\n            <li *ngFor=\"let state of states\" [class.selected]=\"state === currentState\" (click)=\"selectState(state)\">{{state.name}} [{{state.taxAmount}}]</li>\n        </ul>\n    ",
-                styles: ["\n        :host { margin: 5px; }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n        li:hover { background-color: lightyellow; }\n        .selected { background-color: lightsalmon; }\n        li.selected:hover { background-color: lightsalmon; }\n    "]
-            }), 
-            __metadata('design:paramtypes', [stateTaxes_service_1.StateTaxesService, index_1.ResourceService, index_1.ShellService])
-        ], StateTaxesComponent);
         return StateTaxesComponent;
     }());
+    StateTaxesComponent = __decorate([
+        core_1.Component({
+            selector: 'v-state-taxes',
+            template: "\n        <h2>State Taxes</h2>\n        <p>US State Names and Average State Income Tax</p>\n        <p *ngIf=\"currentState\">Selected: {{currentState.name}}\n        <ul>\n            <li *ngFor=\"let state of states\" [class.selected]=\"state === currentState\" (click)=\"selectState(state)\">{{state.name}} [{{state.taxAmount}}]</li>\n        </ul>\n    ",
+            styles: ["\n        :host { margin: 5px; }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n        li:hover { background-color: lightyellow; }\n        .selected { background-color: lightsalmon; }\n        li.selected:hover { background-color: lightsalmon; }\n    "]
+        }),
+        __metadata("design:paramtypes", [stateTaxes_service_1.StateTaxesService,
+            plotter_shell_angular2_1.ResourceService,
+            plotter_shell_angular2_1.ShellService])
+    ], StateTaxesComponent);
     exports.StateTaxesComponent = StateTaxesComponent;
 });
 //# sourceMappingURL=stateTaxes.component.js.map

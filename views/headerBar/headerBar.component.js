@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 define(["require", "exports", "@angular/core", "plotter-shell-angular2"], function (require, exports, core_1, plotter_shell_angular2_1) {
     "use strict";
-    var PageLayoutTestComponent = (function () {
-        function PageLayoutTestComponent(shellService, parameterService, resourceService) {
+    var HeaderBarComponent = (function () {
+        function HeaderBarComponent(shellService, parameterService, resourceService) {
             this.shellService = shellService;
             this.parameterService = parameterService;
             this.resourceService = resourceService;
@@ -18,26 +18,26 @@ define(["require", "exports", "@angular/core", "plotter-shell-angular2"], functi
             this.reuseTab = true;
             var that = this;
         }
-        return PageLayoutTestComponent;
+        return HeaderBarComponent;
     }());
     __decorate([
         core_1.Input(),
         __metadata("design:type", Object)
-    ], PageLayoutTestComponent.prototype, "state", void 0);
+    ], HeaderBarComponent.prototype, "state", void 0);
     __decorate([
         core_1.Input('p-parent-visible'),
         __metadata("design:type", Boolean)
-    ], PageLayoutTestComponent.prototype, "pParentVisible", void 0);
-    PageLayoutTestComponent = __decorate([
+    ], HeaderBarComponent.prototype, "pParentVisible", void 0);
+    HeaderBarComponent = __decorate([
         core_1.Component({
-            selector: 'v-page-layout-test',
-            template: "\n        <h2>Page Layout Test</h2>\n    ",
+            selector: 'v-header-bar',
+            template: "\n        <h2>HeaderBar Test</h2>\n    ",
             styles: ["\n        :host { margin: 5px; }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
         }),
         __metadata("design:paramtypes", [plotter_shell_angular2_1.ShellService,
             plotter_shell_angular2_1.ParameterService,
             plotter_shell_angular2_1.ResourceService])
-    ], PageLayoutTestComponent);
-    exports.PageLayoutTestComponent = PageLayoutTestComponent;
+    ], HeaderBarComponent);
+    exports.HeaderBarComponent = HeaderBarComponent;
 });
-//# sourceMappingURL=pageLayoutTest.component.js.map
+//# sourceMappingURL=headerBar.component.js.map

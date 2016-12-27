@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/index'], function (require, exports, core_1, index_1) {
+define(["require", "exports", "@angular/core", "plotter-shell-angular2"], function (require, exports, core_1, plotter_shell_angular2_1) {
     "use strict";
     var TabLayoutTestComponent = (function () {
         function TabLayoutTestComponent(shellService, parameterService, resourceService) {
@@ -77,20 +77,22 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
                 this.state.layout.activeTab = this.state.layout.tabs[0];
             }
         };
-        __decorate([
-            core_1.Input('p-parent-visible'), 
-            __metadata('design:type', Boolean)
-        ], TabLayoutTestComponent.prototype, "pParentVisible", void 0);
-        TabLayoutTestComponent = __decorate([
-            core_1.Component({
-                selector: 'v-tab-layout-test',
-                template: "\n        <p-tab-layout [state]=\"state\" [p-parent-visible]=\"pParentVisible\"></p-tab-layout>\n    ",
-                styles: ["\n        :host {\n            display: flex;\n            flex-direction: column;\n            background-color: white;\n            padding: 10px;\n            width: 100%;\n            height: 100%;\n        }\n        :host > p-tab-layout {\n            position: relative;\n            flex: 1 0 auto;\n        }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
-            }), 
-            __metadata('design:paramtypes', [index_1.ShellService, index_1.ParameterService, index_1.ResourceService])
-        ], TabLayoutTestComponent);
         return TabLayoutTestComponent;
     }());
+    __decorate([
+        core_1.Input('p-parent-visible'),
+        __metadata("design:type", Boolean)
+    ], TabLayoutTestComponent.prototype, "pParentVisible", void 0);
+    TabLayoutTestComponent = __decorate([
+        core_1.Component({
+            selector: 'v-tab-layout-test',
+            template: "\n        <p-tab-layout [state]=\"state\" [p-parent-visible]=\"pParentVisible\"></p-tab-layout>\n    ",
+            styles: ["\n        :host {\n            display: flex;\n            flex-direction: column;\n            background-color: white;\n            padding: 10px;\n            width: 100%;\n            height: 100%;\n        }\n        :host > p-tab-layout {\n            position: relative;\n            flex: 1 0 auto;\n        }\n        h1 { background-color: cadetblue; }\n        p { background-color: lightsalmon; }\n    "]
+        }),
+        __metadata("design:paramtypes", [plotter_shell_angular2_1.ShellService,
+            plotter_shell_angular2_1.ParameterService,
+            plotter_shell_angular2_1.ResourceService])
+    ], TabLayoutTestComponent);
     exports.TabLayoutTestComponent = TabLayoutTestComponent;
 });
 //# sourceMappingURL=tabLayoutTest.component.js.map

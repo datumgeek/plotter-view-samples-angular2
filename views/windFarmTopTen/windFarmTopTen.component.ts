@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
+import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2';
 import { WindFarmService, IWindFarm } from '../windFarm.service';
 
 @Component({

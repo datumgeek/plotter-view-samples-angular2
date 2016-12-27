@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { ShellModule } from 'plotter-shell-angular2/dist/index';
+import { ShellModule } from 'plotter-shell-angular2';
 
 import { WindFarmService, IWindFarm } from './windFarm.service';
 import { StateTaxesService } from './stateTaxes/stateTaxes.service';
@@ -14,6 +14,7 @@ import { SunburstComponent } from './sunburst/sunburst.component';
 import { StateTaxesComponent } from './stateTaxes/stateTaxes.component';
 import { TabLayoutTestComponent } from './tabLayoutTest/tabLayoutTest.component';
 import { PageLayoutTestComponent } from './pageLayoutTest/pageLayoutTest.component';
+import { HeaderBarComponent } from './headerBar/headerBar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PageLayoutTestComponent } from './pageLayoutTest/pageLayoutTest.compone
     SunburstComponent,
     StateTaxesComponent,
     TabLayoutTestComponent,
-    PageLayoutTestComponent
+    PageLayoutTestComponent,
+    HeaderBarComponent
   ],
   imports: [
     CommonModule,

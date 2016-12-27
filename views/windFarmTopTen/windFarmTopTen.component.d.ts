@@ -1,4 +1,4 @@
-import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
+import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2';
 import { WindFarmService, IWindFarm } from '../windFarm.service';
 export declare class WindFarmTopTenComponent {
     private windFarmService;

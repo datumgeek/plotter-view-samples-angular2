@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
+import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2';
 
 @Component({
     selector: 'v-tab-layout-test',

@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core'], function (require, exports, core_1) {
+define(["require", "exports", "@angular/core"], function (require, exports, core_1) {
     "use strict";
     var d3 = window.d3;
     var SunburstComponent = (function () {
@@ -533,24 +533,24 @@ define(["require", "exports", '@angular/core'], function (require, exports, core
             };
             return data;
         };
-        __decorate([
-            core_1.ViewChild("chartPlaceholder", { read: core_1.ViewContainerRef }), 
-            __metadata('design:type', core_1.ViewContainerRef)
-        ], SunburstComponent.prototype, "chartPlaceholderRef", void 0);
-        __decorate([
-            core_1.ViewChild("formPlaceholder", { read: core_1.ViewContainerRef }), 
-            __metadata('design:type', core_1.ViewContainerRef)
-        ], SunburstComponent.prototype, "formPlaceholderRef", void 0);
-        SunburstComponent = __decorate([
-            core_1.Component({
-                selector: 'v-sunburst',
-                template: "\n        <form #formPlaceholder class=\"sunburst\">\n            <label><input type=\"radio\" name=\"mode\" value=\"size\" checked> Size</label>\n            <label><input type=\"radio\" name=\"mode\" value=\"count\"> Count</label>\n        </form>\n        <div #chartPlaceholder class=\"sunburst-body\">\n        </div>\n    ",
-                styles: ["\n        :host >>> form.sunburst {\n            position: absolute;\n            left: 10px;\n            top: 10px;\n        }\n\n        :host >>> .sunburst-node {\n            border: solid 1px white;\n            font: 10px sans-serif;\n            line-height: 12px;\n            overflow: hidden;\n            position: absolute;\n            text-indent: 2px;\n        }\n        :host >>> .sunburst-body {\n            width: 100%;\n            height: 100%;\n        }\n\n        :host >>> path {\n            stroke: #fff;\n            fill-rule: evenodd;\n        }\n    "]
-            }), 
-            __metadata('design:paramtypes', [])
-        ], SunburstComponent);
         return SunburstComponent;
     }());
+    __decorate([
+        core_1.ViewChild("chartPlaceholder", { read: core_1.ViewContainerRef }),
+        __metadata("design:type", core_1.ViewContainerRef)
+    ], SunburstComponent.prototype, "chartPlaceholderRef", void 0);
+    __decorate([
+        core_1.ViewChild("formPlaceholder", { read: core_1.ViewContainerRef }),
+        __metadata("design:type", core_1.ViewContainerRef)
+    ], SunburstComponent.prototype, "formPlaceholderRef", void 0);
+    SunburstComponent = __decorate([
+        core_1.Component({
+            selector: 'v-sunburst',
+            template: "\n        <form #formPlaceholder class=\"sunburst\">\n            <label><input type=\"radio\" name=\"mode\" value=\"size\" checked> Size</label>\n            <label><input type=\"radio\" name=\"mode\" value=\"count\"> Count</label>\n        </form>\n        <div #chartPlaceholder class=\"sunburst-body\">\n        </div>\n    ",
+            styles: ["\n        :host >>> form.sunburst {\n            position: absolute;\n            left: 10px;\n            top: 10px;\n        }\n\n        :host >>> .sunburst-node {\n            border: solid 1px white;\n            font: 10px sans-serif;\n            line-height: 12px;\n            overflow: hidden;\n            position: absolute;\n            text-indent: 2px;\n        }\n        :host >>> .sunburst-body {\n            width: 100%;\n            height: 100%;\n        }\n\n        :host >>> path {\n            stroke: #fff;\n            fill-rule: evenodd;\n        }\n    "]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SunburstComponent);
     exports.SunburstComponent = SunburstComponent;
 });
 //# sourceMappingURL=sunburst.component.js.map

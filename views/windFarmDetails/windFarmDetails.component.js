@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core', '../windFarm.service'], function (require, exports, core_1, windFarm_service_1) {
+define(["require", "exports", "@angular/core", "../windFarm.service"], function (require, exports, core_1, windFarm_service_1) {
     "use strict";
     var WindFarmDetailsComponent = (function () {
         function WindFarmDetailsComponent(windFarmService) {
@@ -26,16 +26,16 @@ define(["require", "exports", '@angular/core', '../windFarm.service'], function 
                 });
             }
         };
-        WindFarmDetailsComponent = __decorate([
-            core_1.Component({
-                selector: 'v-wind-farm-details',
-                template: "\n        <h2>Wind Farm Details</h2>\n        <div *ngIf=\"farm\">\n            <h3>{{farm.Name}}</h3>\n            <p><b>{{farm.Name}}</b> has {{farm.TurbineCount | number}} wind turbine<span *ngIf=\"farm.TurbineCount !== 1\">s</span>.</p>\n            <p>{{farm.Description}}\n        </div>\n    ",
-                styles: ["\n        h1 {\n            background-color: cadetblue;\n        }\n\n        p {\n            background-color: white;\n        }\n    "]
-            }), 
-            __metadata('design:paramtypes', [windFarm_service_1.WindFarmService])
-        ], WindFarmDetailsComponent);
         return WindFarmDetailsComponent;
     }());
+    WindFarmDetailsComponent = __decorate([
+        core_1.Component({
+            selector: 'v-wind-farm-details',
+            template: "\n        <h2>Wind Farm Details</h2>\n        <div *ngIf=\"farm\">\n            <h3>{{farm.Name}}</h3>\n            <p><b>{{farm.Name}}</b> has {{farm.TurbineCount | number}} wind turbine<span *ngIf=\"farm.TurbineCount !== 1\">s</span>.</p>\n            <p>{{farm.Description}}\n        </div>\n    ",
+            styles: ["\n        h1 {\n            background-color: cadetblue;\n        }\n\n        p {\n            background-color: white;\n        }\n    "]
+        }),
+        __metadata("design:paramtypes", [windFarm_service_1.WindFarmService])
+    ], WindFarmDetailsComponent);
     exports.WindFarmDetailsComponent = WindFarmDetailsComponent;
 });
 //# sourceMappingURL=windFarmDetails.component.js.map

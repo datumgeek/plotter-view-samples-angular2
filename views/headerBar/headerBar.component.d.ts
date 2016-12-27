@@ -1,5 +1,5 @@
 import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2';
-export declare class PageLayoutTestComponent {
+export declare class HeaderBarComponent {
     private shellService;
     parameterService: ParameterService;
     resourceService: ResourceService;

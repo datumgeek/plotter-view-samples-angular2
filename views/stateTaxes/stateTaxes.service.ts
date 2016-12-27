@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
+import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2';
 import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 

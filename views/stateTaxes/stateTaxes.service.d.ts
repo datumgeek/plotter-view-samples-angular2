@@ -1,4 +1,4 @@
-import { ResourceService } from 'plotter-shell-angular2/dist/index';
+import { ResourceService } from 'plotter-shell-angular2';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 export declare class StateTaxesService {

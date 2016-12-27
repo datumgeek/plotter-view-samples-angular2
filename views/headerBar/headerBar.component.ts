@@ -2,9 +2,9 @@ import { Component, Input } from '@angular/core';
 import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2';
 
 @Component({
-    selector: 'v-page-layout-test',
+    selector: 'v-header-bar',
     template: `
-        <h2>Page Layout Test</h2>
+        <h2>HeaderBar Test</h2>
     `,
     styles: [`
         :host { margin: 5px; }
@@ -12,7 +12,7 @@ import { ShellService, ParameterService, ResourceService } from 'plotter-shell-a
         p { background-color: lightsalmon; }
     `]
 })
-export class PageLayoutTestComponent {
+export class HeaderBarComponent {
 
     @Input() state: any;
     @Input('p-parent-visible') pParentVisible: boolean = true;

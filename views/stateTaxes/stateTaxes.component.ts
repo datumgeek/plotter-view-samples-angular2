@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ResourceService, ShellService } from 'plotter-shell-angular2/dist/index';
+import { ResourceService, ShellService } from 'plotter-shell-angular2';
 import { StateTaxesService, IStateInfo } from './stateTaxes.service';
 
 @Component({

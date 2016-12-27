@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core'], function (require, exports, core_1) {
+define(["require", "exports", "@angular/core"], function (require, exports, core_1) {
     "use strict";
     var WindFarmService = (function () {
         function WindFarmService() {
@@ -45,12 +45,12 @@ define(["require", "exports", '@angular/core'], function (require, exports, core
         WindFarmService.prototype.addNewFarm = function (farm) {
             this.windFarms.push(farm);
         };
-        WindFarmService = __decorate([
-            core_1.Injectable(), 
-            __metadata('design:paramtypes', [])
-        ], WindFarmService);
         return WindFarmService;
     }());
+    WindFarmService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [])
+    ], WindFarmService);
     exports.WindFarmService = WindFarmService;
 });
 //# sourceMappingURL=windFarm.service.js.map

@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2/dist/index';
+import { ShellService, ParameterService, ResourceService } from 'plotter-shell-angular2';
 export declare class TabLayoutTestComponent implements OnInit {
     private shellService;
     parameterService: ParameterService;

@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/index', '@angular/http', 'rxjs/Rx'], function (require, exports, core_1, index_1, http_1) {
+define(["require", "exports", "@angular/core", "plotter-shell-angular2", "@angular/http", "rxjs/Rx"], function (require, exports, core_1, plotter_shell_angular2_1, http_1) {
     "use strict";
     var StateTaxesService = (function () {
         function StateTaxesService(http, resourceService) {
@@ -28,12 +28,12 @@ define(["require", "exports", '@angular/core', 'plotter-shell-angular2/dist/inde
             };
             this.baseUrl = this.resourceService.resources['plotter-view-samples-angular2'];
         }
-        StateTaxesService = __decorate([
-            core_1.Injectable(), 
-            __metadata('design:paramtypes', [http_1.Http, index_1.ResourceService])
-        ], StateTaxesService);
         return StateTaxesService;
     }());
+    StateTaxesService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http, plotter_shell_angular2_1.ResourceService])
+    ], StateTaxesService);
     exports.StateTaxesService = StateTaxesService;
 });
 //# sourceMappingURL=stateTaxes.service.js.map
